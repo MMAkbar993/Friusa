@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friusa - Prodotti Ittici Congelati</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Added GDPR cookie consent banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h4>🍪 Utilizziamo i Cookie</h4>
+                <p>Questo sito utilizza cookie tecnici e di profilazione per migliorare la tua esperienza di navigazione. Continuando la navigazione accetti l'utilizzo dei cookie.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptAll" class="cookie-btn accept">Accetta Tutti</button>
+                <button id="acceptNecessary" class="cookie-btn necessary">Solo Necessari</button>
+                <button id="cookieSettings" class="cookie-btn settings">Impostazioni</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added cookie settings modal -->
+    <div id="cookieModal" class="cookie-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Impostazioni Cookie</h3>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4>Cookie Necessari</h4>
+                        <label class="switch">
+                            <input type="checkbox" id="necessaryCookies" checked disabled>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p>Questi cookie sono essenziali per il funzionamento del sito web e non possono essere disabilitati.</p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4>Cookie Analitici</h4>
+                        <label class="switch">
+                            <input type="checkbox" id="analyticsCookies">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p>Questi cookie ci aiutano a capire come i visitatori interagiscono con il sito web raccogliendo informazioni in forma anonima.</p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4>Cookie di Marketing</h4>
+                        <label class="switch">
+                            <input type="checkbox" id="marketingCookies">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p>Questi cookie vengono utilizzati per tracciare i visitatori sui siti web per mostrare annunci pertinenti e coinvolgenti.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettings" class="cookie-btn accept">Salva Impostazioni</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🐟 Friusa</h1>
+                    <p>Prodotti Ittici di Qualità</p>
+                </div>
+                <div class="contact-info">
+                    <p>Div. International / Barcelona</p>
+                    <p>Tel.: +34 93 430 06 68 - 66 99 72 391</p>
+                    <p>jsoler@friusa.es | www.friusa.es</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Prodotti Ittici Congelati d'Europa</h2>
+            <p>Selezione e distribuzione diretta di pescato</p>
+            <p class="quality-text">🏆 Qualità garantita dal 1995</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="filters">
+                <h3>I Nostri Prodotti</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Tutti i Prodotti</button>
+                    <button class="filter-btn" data-category="marisco">Crostacei</button>
+                    <button class="filter-btn" data-category="salmon">Salmone</button>
+                    <button class="filter-btn" data-category="cefalopodi">Cefalopodi</button>
+                    <button class="filter-btn" data-category="filetti">Filetti di Pesce</button>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Cerca prodotti...">
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🐟 Pescatore d'Anguille</h4>
+                    <p>Tradizione e qualità europea</p>
+                    <p>Anguille fresche selezionate e d'allevamento</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📍 Contatti</h4>
+                    <p>Mario Bonandin</p>
+                    <p>Via del Mare 45</p>
+                    <p>30175 Marghera (VE)</p>
+                    <p>Tel: 3356578341</p>
+                </div>
+                <div class="footer-section">
+                    <h4>ℹ️ Informazioni</h4>
+                    <p>Vendita solo all'ingrosso</p>
+                    <p>Ordini tramite WhatsApp</p>
+                    <p>Consegna in tutta Italia</p>
+                    <p>Prodotti freschi garantiti</p>
+                </div>
+                <!-- Added GDPR links section -->
+                <div class="footer-section">
+                    <h4>🔒 Privacy & GDPR</h4>
+                    <p><a href="privacy.html">Privacy Policy</a></p>
+                    <p><a href="cookie-policy.html">Cookie Policy</a></p>
+                    <p><a href="#" id="manageCookies">Gestisci Cookie</a></p>
+                    <p><a href="terms.html">Termini di Servizio</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Pescatore d'Anguille - Mario Bonandin. Tutti i diritti riservati.</p>
+                <p>PV valido fino a fine esistenze - questo listino annulla il precedente</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
